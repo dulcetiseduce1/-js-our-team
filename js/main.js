@@ -11,7 +11,7 @@ const membriTeam = [
     {
         nome:'Angela Caroll',
         ruolo:'Chief Editor',
-        foto:'img/angerla-caroll-chief-editor.jpg',
+        foto:'img/angela-caroll-chief-editor.jpg',
     },
     {
         nome:'Walter Gordon',
@@ -36,6 +36,20 @@ const membriTeam = [
 ]
 
 //ciclo per stampare
-for(let i=0; i < membriTeam.length;i++){
-    const membro
+for(let i = 0; i < membriTeam.length; i++) {
+    const membroTeam = membriTeam[i]
+    
+    const template = `<div class="team-card">
+                        <div class="card-image">
+                          <img
+                            src= ${membroTeam.foto}
+                          />
+                        </div>
+                        <div class="card-text">
+                          <h3>${membroTeam.nome}</h3>
+                          <p>${membroTeam.ruolo}</p>
+                        </div>
+                      </div>`
+
+    teamContainer.innerHTML += template;
 }
